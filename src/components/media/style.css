@@ -1,0 +1,19 @@
+.media {
+  position: fixed;
+  left: 15px;
+  top: 150px;
+}
+.media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.media-line {
+  position: absolute;
+  left: 50%;
+  height: 150px;
+  width: 1px;
+  background: #fff;
+  top: -150px;
+}

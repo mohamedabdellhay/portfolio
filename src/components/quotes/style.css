@@ -1,0 +1,41 @@
+.quote {
+  max-width: 1000px;
+  border: 1px solid grey;
+  position: relative;
+  padding: 19px 48px;
+  margin: 10px 0 50px;
+}
+
+.quote::after {
+  content: "“";
+  background-color: #282c33;
+  font-size: 4rem;
+  position: absolute;
+  bottom: -4px;
+  right: 15px;
+  height: 25px;
+}
+.quote::before {
+  content: "“";
+  background-color: #282c33;
+  font-size: 4rem;
+  position: absolute;
+  top: -22px;
+  left: 15px;
+  height: 25px;
+}
+.quote-sign-parent {
+  position: absolute;
+  width: fit-content;
+  bottom: -65px;
+  right: -1px;
+  border: 1px solid grey;
+  padding: 20px 48px 20px 48px;
+}
+.quote-sign {
+  /* position: absolute; */
+}
+.quote-sign:first-child {
+  font-size: 1.1rem;
+  margin-right: 5px !important;
+}

@@ -1,0 +1,23 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  color: gray;
+}
+.project > div {
+  border: 1px solid grey;
+}
+
+.project > div:nth-child(2) {
+  padding: 10px;
+}
+
+.project > div:last-child {
+  padding: 15px;
+}

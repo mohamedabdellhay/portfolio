@@ -1,0 +1,21 @@
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  /* background-color: #333; */
+  color: #fff;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  list-style: none;
+}
+
+header ul li::before {
+  content: "#";
+  margin-right: 2px;
+  color: var(--primary-color);
+}

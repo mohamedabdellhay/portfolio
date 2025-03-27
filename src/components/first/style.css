@@ -1,0 +1,9 @@
+.first-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100vh;
+}
+.primary-color {
+  color: var(--primary-color);
+}
