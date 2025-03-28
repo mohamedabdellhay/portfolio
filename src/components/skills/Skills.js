@@ -2,152 +2,65 @@ import SectionHeader from "../SectionHeader";
 import "./style.css";
 
 export default function Skills() {
-  return (
-    <section className="container">
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          margin: "0 0 20px",
-        }}
-      >
-        <SectionHeader title="Skills" />
-        <div></div>
-        <div></div>
-      </div>
+  const skillCategories = [
+    {
+      title: "Languages",
+      skills: ["TypeScript", "JavaScript", "Python", "Java", "C#", "PHP"],
+    },
+    {
+      title: "Frameworks",
+      skills: ["React", "Vue", "Angular", "Node.js", "Express", "Django"],
+    },
+    {
+      title: "Tools",
+      skills: ["Git", "Docker", "Webpack", "Figma", "Postman", "Jest"],
+    },
+    {
+      title: "Databases",
+      skills: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Redis"],
+    },
+    {
+      title: "Cloud",
+      skills: ["AWS", "Azure", "GCP", "Heroku", "Netlify"],
+    },
+    {
+      title: "Other",
+      skills: ["GraphQL", "REST", "CI/CD", "Agile", "Scrum"],
+    },
+  ];
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 70px 2fr" }}>
-        <div>
-          <img
-            src="./images/Group 36.png"
-            alt="i"
-            style={{ width: "100%", display: "block" }}
-          />
+  return (
+    <div className="container">
+      <section className="skills-section">
+        <div className="skills-header">
+          <SectionHeader title="Skills" />
         </div>
-        <div></div>
-        <div>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr 1fr",
-              gap: "20px",
-            }}
-          >
-            <div>
-              <div className="color-grey border-grey">
-                <div
-                  className="padding-10"
-                  style={{ borderBottom: "1px solid" }}
-                >
-                  <h4>Languages</h4>
-                </div>
-                <div
-                  style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
-                  className="padding-10"
-                >
-                  <span>TypeScript</span>
-                  <span>JavaScript</span>
-                  <span>Python</span>
-                  <span>Java</span>
+
+        <div className="skills-container">
+          <div className="skills-graphic">
+            <img
+              src="./images/Group 36.png"
+              alt="Skills visualization"
+              loading="lazy"
+            />
+          </div>
+
+          <div className="skills-grid">
+            {skillCategories.map((category, index) => (
+              <div key={index} className="skill-category">
+                <h3 className="category-title">{category.title}</h3>
+                <div className="skills-list">
+                  {category.skills.map((skill, skillIndex) => (
+                    <span key={skillIndex} className="skill-item">
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
-            </div>
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "20px" }}
-            >
-              <div className="color-grey border-grey">
-                <div
-                  className="padding-10"
-                  style={{ borderBottom: "1px solid" }}
-                >
-                  <h4>Languages</h4>
-                </div>
-                <div
-                  style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
-                  className="padding-10"
-                >
-                  <span>TypeScript</span>
-                  <span>JavaScript</span>
-                  <span>Python</span>
-                  <span>Java</span>
-                </div>
-              </div>
-              <div className="color-grey border-grey">
-                <div
-                  className="padding-10"
-                  style={{ borderBottom: "1px solid" }}
-                >
-                  <h4>Languages</h4>
-                </div>
-                <div
-                  style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
-                  className="padding-10"
-                >
-                  <span>TypeScript</span>
-                  <span>JavaScript</span>
-                  <span>Python</span>
-                  <span>Java</span>
-                </div>
-              </div>
-            </div>
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "20px" }}
-            >
-              <div className="color-grey border-grey">
-                <div
-                  className="padding-10"
-                  style={{ borderBottom: "1px solid" }}
-                >
-                  <h4>Languages</h4>
-                </div>
-                <div
-                  style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
-                  className="padding-10"
-                >
-                  <span>TypeScript</span>
-                  <span>JavaScript</span>
-                  <span>Python</span>
-                  <span>Java</span>
-                </div>
-              </div>
-              <div className="color-grey border-grey">
-                <div
-                  className="padding-10"
-                  style={{ borderBottom: "1px solid" }}
-                >
-                  <h4>Languages</h4>
-                </div>
-                <div
-                  style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
-                  className="padding-10"
-                >
-                  <span>TypeScript</span>
-                  <span>JavaScript</span>
-                  <span>Python</span>
-                  <span>Java</span>
-                </div>
-              </div>
-              <div className="color-grey border-grey">
-                <div
-                  className="padding-10"
-                  style={{ borderBottom: "1px solid" }}
-                >
-                  <h4>Languages</h4>
-                </div>
-                <div
-                  style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
-                  className="padding-10"
-                >
-                  <span>TypeScript</span>
-                  <span>JavaScript</span>
-                  <span>Python</span>
-                  <span>Java</span>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

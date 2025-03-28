@@ -1,9 +1,125 @@
 .first-section {
+  display: flex;
+  /* min-height: 100vh;
+   */
+  margin-top: 20px;
+  padding: 2rem;
+  align-items: center;
+}
+
+.content-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  height: 100vh;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.primary-color {
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.text-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.highlight {
   color: var(--primary-color);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 80%;
+}
+
+.cta-button {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper {
+  position: relative;
+  aspect-ratio: 1/1;
+}
+
+.logo-decoration {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: 2;
+  width: 80px;
+}
+
+.main-image {
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dots-decoration {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  z-index: 2;
+  width: 80px;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .text-content {
+    order: 2;
+    text-align: center;
+    align-items: center;
+  }
+
+  .subtitle {
+    max-width: 100%;
+  }
+
+  .cta-button {
+    align-self: center;
+  }
+
+  .image-wrapper {
+    order: 1;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .first-section {
+    padding: 2rem 1rem;
+  }
+
+  .logo-decoration,
+  .dots-decoration {
+    width: 60px;
+    z-index: 0;
+  }
 }

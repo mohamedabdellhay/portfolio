@@ -1,33 +1,48 @@
 import "./style.css";
+// import { useMediaQuery } from "react-responsive";
 
 export default function FirstSection() {
+  // const isMobile = useMediaQuery({ maxWidth: 768 });
+
   return (
-    <div className="first-section container">
-      <div>
-        <h2 style={{ fontSize: "2.5rem" }}>
-          Elias is a <span className="primary-color">web designer</span> and{" "}
-          <span className="primary-color">front-end developer</span>
-        </h2>
-        <p>He crafts responsive websites where technologies meet creativity</p>
-        <a href="contact-me">Contact me!!</a>
-      </div>
-      <div>
-        <div style={{ position: "relative" }}>
-          <div style={{ position: "absolute" }}>
-            <img src="/images/first/Logo.png" alt="logo" />
-          </div>
-          <div style={{ position: "relative" }}>
+    <section className="first-section">
+      <div className="content-wrapper">
+        <div className="text-content">
+          <h1>
+            Elias is a <span className="highlight">web designer</span> and{" "}
+            <span className="highlight">front-end developer</span>
+          </h1>
+          <p className="subtitle">
+            He crafts responsive websites where technologies meet creativity
+          </p>
+          <button className="cta-button">Contact me!!</button>
+        </div>
+
+        <div className="image-wrapper">
+          <div className="logo-decoration">
             <img
-              src="/images/first/Image.png"
-              alt="imag"
-              style={{ width: "100%", height: "100%" }}
+              src="/images/first/Logo.png"
+              alt="Decoration logo"
+              loading="lazy"
             />
           </div>
-          <div style={{ position: "absolute", bottom: "0px", right: "0" }}>
-            <img src="/images/first/Dots.png" alt="Dots" />
+          <div className="main-image">
+            <img
+              src="/images/first/Image.png"
+              alt="Elias portfolio"
+              loading="lazy"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
+          <div className="dots-decoration">
+            <img
+              src="/images/first/Dots.png"
+              alt="Decoration dots"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

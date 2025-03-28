@@ -1,21 +1,88 @@
-header > div {
+/* Base Styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  /* background-color: #333; */
-  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-header ul {
+.logo {
   display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  list-style: none;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
 }
 
-header ul li::before {
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  cursor: pointer;
+  position: relative;
+}
+
+nav ul li::before {
   content: "#";
-  margin-right: 2px;
-  color: var(--primary-color);
+  margin-right: 4px;
+  color: var(--primary-color, #4caf50);
+}
+
+/* Mobile Styles */
+.hamburger {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-menu ul li {
+  padding: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
