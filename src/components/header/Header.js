@@ -1,5 +1,6 @@
 import "./style.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +11,7 @@ export default function Header() {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); // التحقق عند التحميل الأولي
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -49,10 +50,18 @@ export default function Header() {
         ) : (
           <nav>
             <ul>
-              <li>home</li>
-              <li>works</li>
-              <li>about-me</li>
-              <li>contacts</li>
+              <li>
+                <Link to="/">home</Link>
+              </li>
+              <li>
+                <Link to="works">works</Link>
+              </li>
+              <li>
+                <Link to="/about">about-me</Link>
+              </li>
+              <li>
+                <Link to="/contact">contacts</Link>
+              </li>
               <li>EN</li>
             </ul>
           </nav>

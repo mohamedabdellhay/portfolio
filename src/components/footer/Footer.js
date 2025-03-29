@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-copyright">
-            © Copyright {currentYear}. Made by Abdellhay
+            <div>© Copyright {currentYear}. Made by Abdellhay</div>
           </div>
         </div>
       </div>

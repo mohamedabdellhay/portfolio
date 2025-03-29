@@ -1,3 +1,6 @@
 :root {
   --primary-color: #c778dd;
 }
+.page-content {
+  flex-grow: 1;
+}
