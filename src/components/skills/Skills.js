@@ -47,7 +47,7 @@ export default function Skills() {
 
           <div className="skills-grid">
             {skillCategories.map((category, index) => (
-              <div key={index} className="skill-category">
+              <div key={index} className="skill-category border-grey">
                 <h3 className="category-title">{category.title}</h3>
                 <div className="skills-list">
                   {category.skills.map((skill, skillIndex) => (

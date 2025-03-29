@@ -30,23 +30,28 @@ export default function Footer() {
             </div>
 
             <div className="footer-media">
-              <h3 className="media-title">Media</h3>
-              <div className="media-icons">
-                <a
-                  href="https://github.com/mohamedabdellhay"
-                  aria-label="GitHub"
-                >
-                  <Github />
-                </a>
-                <a href="mailto:mohamedabdellhay1@gmail.com" aria-label="Email">
-                  <Email />
-                </a>
-                <a
-                  href="https://linkedin.com/in/mohamedabdellhay"
-                  aria-label="LinkedIn"
-                >
-                  <LinkedIn />
-                </a>
+              <div>
+                <h3 className="media-title">Media</h3>
+                <div className="media-icons">
+                  <a
+                    href="https://github.com/mohamedabdellhay"
+                    aria-label="GitHub"
+                  >
+                    <Github />
+                  </a>
+                  <a
+                    href="mailto:mohamedabdellhay1@gmail.com"
+                    aria-label="Email"
+                  >
+                    <Email />
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/mohamedabdellhay"
+                    aria-label="LinkedIn"
+                  >
+                    <LinkedIn />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
