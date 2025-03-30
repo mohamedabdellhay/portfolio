@@ -69,12 +69,34 @@ export default function Header() {
 
         {isMobile && isMenuOpen && (
           <div className="mobile-menu">
-            <ul>
-              <li>home</li>
-              <li>works</li>
-              <li>about-me</li>
-              <li>contacts</li>
-              <li>EN</li>
+            <ul
+              onClick={(event) => {
+                if (event.target.closest(".mobile-link")) {
+                  setIsMenuOpen(false);
+                }
+              }}
+            >
+              <li>
+                <Link to="/" className="mobile-link">
+                  home
+                </Link>
+              </li>
+              <li>
+                <Link to="works" className="mobile-link">
+                  works
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="mobile-link">
+                  about-me
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="mobile-link">
+                  contacts
+                </Link>
+              </li>
+              <li className="mobile-link">EN</li>
             </ul>
           </div>
         )}

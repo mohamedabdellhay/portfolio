@@ -2,7 +2,7 @@
 import AboutMe from "../components/aboutMe/AboutMe";
 import FirstSection from "../components/first/FirstSection";
 
-import Projects from "../components/projects/Projects";
+import { RenderProjects } from "../components";
 import Quotes from "../components/quotes/Quotes";
 import Skills from "../components/skills/Skills";
 import Contacts from "../components/contacts/Contacts";
@@ -12,7 +12,7 @@ function Home() {
     <div className="App">
       <FirstSection />
       <Quotes />
-      <Projects />
+      <RenderProjects />
       <Skills />
       <AboutMe />
       <Contacts />

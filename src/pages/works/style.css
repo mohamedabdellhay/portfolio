@@ -1,0 +1,56 @@
+.completed-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  padding: 0 0 40px 0;
+}
+.grid-projects {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.position-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+.show-more {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.show-more.color-grey {
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .grid-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 60px 0;
+  }
+
+  .project-tags {
+    gap: 6px;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+  }
+}

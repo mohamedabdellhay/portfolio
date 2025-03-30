@@ -1,21 +1,37 @@
+import { Link } from "react-router-dom";
 import "./style.css";
+import { useState, useEffect } from "react";
 // import { useMediaQuery } from "react-responsive";
 
 export default function FirstSection() {
   // const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <section className="first-section">
       <div className="content-wrapper">
         <div className="text-content">
           <h1>
-            Elias is a <span className="highlight">web designer</span> and{" "}
+            Abdellhay is a <span className="highlight">web designer</span> and{" "}
             <span className="highlight">front-end developer</span>
           </h1>
-          <p className="subtitle">
+          <p className="subtitle color-grey">
             He crafts responsive websites where technologies meet creativity
           </p>
-          <button className="cta-button">Contact me!!</button>
+          {!isMobile && (
+            <button className="cta-button">
+              <Link to="contact">Contact me!!</Link>
+            </button>
+          )}
         </div>
 
         <div className="image-wrapper">

@@ -1,32 +1,27 @@
 import SectionHeader from "../SectionHeader";
 import "./style.css";
 import Project from "./Project";
+import { projectsData } from "../../data";
 
-export default function Projects() {
-  const projects = [
-    {
-      img: "./images/Rectangle 22.jpg",
-      title: "ChertNodes",
-      description: "Minecraft servers hosting platform",
-      tags: ["HTML", "SCSS", "Python", "Flask"],
-      links: ["Live <~>", "Cached >= "],
-    },
-    {
-      img: "./images/Rectangle 22.jpg",
-      title: "ProtectX",
-      description: "Application for increasing privacy and security",
-      tags: ["React", "Express", "MongoDB", "Node.js"],
-      links: ["Live <~>", "Cached >= "],
-    },
-    {
-      img: "./images/Rectangle 22.jpg",
-      title: "Kahoot Answers",
-      description: "Get answers to your kahoot quiz",
-      tags: ["Vue", "CSS", "JavaScript"],
-      links: ["Live <~>", "Cached >= "],
-    },
-  ];
+function Projects({ limit }) {
+  const projects = projectsData.slice(0, limit);
+  return (
+    <>
+      {projects.map((project, index) => (
+        <Project
+          key={index}
+          img={project.img}
+          title={project.title}
+          description={project.description}
+          tags={project.tags}
+          links={project.links}
+        />
+      ))}
+    </>
+  );
+}
 
+function RenderProjects() {
   return (
     <section className="projects-section">
       <div className="projects-container">
@@ -40,18 +35,11 @@ export default function Projects() {
         </div>
 
         <div className="projects-grid">
-          {projects.map((project, index) => (
-            <Project
-              key={index}
-              img={project.img}
-              title={project.title}
-              description={project.description}
-              tags={project.tags}
-              links={project.links}
-            />
-          ))}
+          <Projects limit={3} />
         </div>
       </div>
     </section>
   );
 }
+
+export { Projects, RenderProjects };

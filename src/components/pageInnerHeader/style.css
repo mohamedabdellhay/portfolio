@@ -1,0 +1,9 @@
+.page-inner-header {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 20px 0;
+}
+.page-inner-header::before {
+  content: "#";
+  color: var(--primary-color);
+}
