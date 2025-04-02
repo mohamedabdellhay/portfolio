@@ -102,5 +102,62 @@ const smallProjectsData = [
   },
 ];
 
+const Skills = [
+  {
+    name: "Languages",
+    list: ["JavaScript", "PHP", "Node.js"],
+  },
+  {
+    name: "Tools & Frameworks",
+    list: [
+      "Laravel",
+      "React",
+      "MongoDB",
+      "Mongoose",
+      "Express.js",
+      "EJS",
+      "Bootstrap",
+    ],
+  },
+  {
+    name: "Development Tools",
+    list: ["Git", "Docker", "Postman", "Syncthing", "Cron Jobs"],
+  },
+  {
+    name: "Other Skills",
+    list: ["Web Scraping", "SEO", "UI Design"],
+  },
+  {
+    name: "Databases",
+    list: ["MySQL", "mongo"],
+  },
+];
+
+// const factsData = [];
+
+const funFactsData = [
+  "I summer more than winter!",
+  "I Self-taught web developer",
+  "Always exploring new tech stacks",
+  // "📝 Building a blog app with EJS and Node.js – because content matters!",
+  // "📦 Loves organizing and structuring projects efficiently.",
+  "Passionate about SEO",
+  // "⚡ Prefers backend magic with Node.js but also crafts sleek frontends.",
+  // "🛍️ Currently working on an e-commerce app with Laravel and Blade.",
+  // "📊 Enjoys filtering and sorting data by dates – because organization is key!",
+  // "🔍 Experimenting with web scraping to extract valuable insights.",
+  // "📂 Keeps his files perfectly synced between his devices using Syncthing.",
+  // "🎨 Designing his personal portfolio with a modern and clean UI.",
+  // "☕ Likely to be found sipping coffee while debugging code.",
+  "My favorite movie is The Green Mile",
+  "Always learning and leveling up his tech skills!",
+];
+
 const projectsLength = projectsData.length;
-export { projectsData, projectsLength, smallProjectsData };
+export {
+  projectsData,
+  projectsLength,
+  smallProjectsData,
+  Skills,
+  funFactsData,
+};
