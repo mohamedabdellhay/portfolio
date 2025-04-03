@@ -89,7 +89,7 @@ a {
   margin-top: 20px;
 }
 .font-400 {
-  font-weight: 400px;
+  font-weight: 400;
 }
 .font-500 {
   font-weight: 500;
@@ -99,6 +99,9 @@ a {
 }
 .margin-bottom-20 {
   margin-bottom: 20px;
+}
+.margin-bottom-70 {
+  margin-bottom: 70px;
 }
 .ln-height-25 {
   line-height: 25px;
@@ -118,6 +121,9 @@ a {
 }
 .space-between {
   justify-content: space-between;
+}
+.gap-5 {
+  gap: 5px;
 }
 .gap-10 {
   gap: 10px;

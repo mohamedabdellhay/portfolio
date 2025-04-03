@@ -67,3 +67,5 @@ export default function Contacts() {
     </section>
   );
 }
+
+export { email, github };

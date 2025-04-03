@@ -4,6 +4,7 @@ import { Skills } from "../../data";
 import Skill from "../../components/skills/Skill";
 import "./style.css";
 import Facts from "../../components/facts/Facts";
+import { isMobile } from "../../util/isMobile";
 
 function About() {
   return (
@@ -46,7 +47,9 @@ function About() {
               <div
                 className="grid gap-10"
                 style={{
-                  gridTemplateColumns: `repeat(${Skills.length}, 1fr)`,
+                  gridTemplateColumns: isMobile()
+                    ? ""
+                    : `repeat(${Skills.length}, 1fr)`,
                 }}
               >
                 {Skills.map((ele) => (
@@ -60,26 +63,21 @@ function About() {
               <PageInnerHeader title="my-fun-facts" />
             </div>
             <div>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "2fr 1fr",
-                  gap: "10px",
-                  alignItems: "center",
-                }}
-              >
+              <div className={isMobile() ? `` : `custom-grid`}>
                 <div>
                   <div>
                     <Facts />
                   </div>
                 </div>
-                <div className="flex justify-end mob-none">
-                  <img
-                    src="./images/Group 53.png"
-                    alt=""
-                    style={{ maxHeight: "170px" }}
-                  />
-                </div>
+                {!isMobile() && (
+                  <div className="flex justify-end mob-none">
+                    <img
+                      src="./images/Group 53.png"
+                      alt=""
+                      style={{ maxHeight: "170px" }}
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </div>

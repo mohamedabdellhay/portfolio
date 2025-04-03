@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="footer-info">
               <div className="footer-contact">
                 <div className="footer-brand">
-                  <Logo />
+                  {Logo}
                   <span>Abdellhay</span>
                 </div>
                 <a
@@ -37,19 +37,19 @@ export default function Footer() {
                     href="https://github.com/mohamedabdellhay"
                     aria-label="GitHub"
                   >
-                    <Github />
+                    {Github}
                   </a>
                   <a
                     href="mailto:mohamedabdellhay1@gmail.com"
                     aria-label="Email"
                   >
-                    <Email />
+                    {Email}
                   </a>
                   <a
                     href="https://linkedin.com/in/mohamedabdellhay"
                     aria-label="LinkedIn"
                   >
-                    <LinkedIn />
+                    {LinkedIn}
                   </a>
                 </div>
               </div>

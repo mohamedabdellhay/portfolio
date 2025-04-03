@@ -6,7 +6,12 @@ export default function Contact({ img, title, link }) {
       <div className="contact">
         <div> {img}</div>
         <div>
-          <a href={link} target="_blank" rel="noreferrer">
+          <a
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            className="color-grey"
+          >
             {title}
           </a>
         </div>
